@@ -1,5 +1,7 @@
 # Forge Install Bootstrapper
 
+基于 bangbang93/forge-install-bootstrapper 的改版，移除了bmclapi，并且恢复了下载mappings的步骤
+
 Forge的安装器在发布时删除了--installClient的命令行选项，所以我写了这个小程序实现forge从命令行自动安装
 
 # 使用
