@@ -2,3 +2,4 @@
 lib
 out
 *.log
+.DS_STORE

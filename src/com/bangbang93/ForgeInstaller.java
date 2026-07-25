@@ -38,17 +38,6 @@ public class ForgeInstaller {
       return Arrays.asList(processorArgs).contains("DOWNLOAD_MOJMAPS");
     }))
       .collect(Collectors.toList());
-    processors.removeAll(target);
-
-    Mirror mirror = new Gson().fromJson(new StringReader(
-      "{\n" +
-        "    \"name\": \"bmclapi\",\n" +
-        "    \"url\": \"http://bmclapi.bangbang93.com/maven/\"\n" +
-        "}"
-    ), Mirror.class);
-    Field mirrorField = Class.forName("net.minecraftforge.installer.json.Install").getDeclaredField("mirror");
-    mirrorField.setAccessible(true);
-    mirrorField.set(install, mirror);
 
     ProgressCallback monitor = ProgressCallback.withOutputs(System.out);
     String path;
